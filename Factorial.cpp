@@ -53,7 +53,7 @@ int main(void)
 		std::ranges::for_each(results, [&result](const mpz_class* r) { result *= *r; });
 	}
 
-	fmt::println("result: {}", result);
+	fmt::println("result: {}", result.get_str(10));
 
 	const clock_t end{ clock() };
 	fmt::println("Time: {}s", static_cast<double>(end - start) / CLOCKS_PER_SEC);
